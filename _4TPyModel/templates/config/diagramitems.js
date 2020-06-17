@@ -18,6 +18,16 @@ if (diagrama=='menu'){
         window.open('/static/diagramas/index.html?diagrama=menu','_self');
     }
     
+    
+        if (item==17){
+        window.open('/static/blocky/builder.html','_blank');
+    }
+    
+            if (item==18){
+        window.open('/static/blocky/gblocky/demos/blockfactory/index.html','_blank');
+    }
+    
+    
     if (item==11){
        // window.open('../../adminzone','_self');
         
