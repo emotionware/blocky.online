@@ -710,6 +710,21 @@ def saveblock():
     return 'Archivo Guardado' #"<!DOCTYPE html><html><head><!-- HTML meta refresh URL redirection -->   <meta http-equiv='refresh'   content='0; url=static/ace/ace.html?archivo=" + archivo + "&tipo=html'></head><body></body></html>"
 
 
+@app.route('/saveblockscript', methods=['POST', 'GET'])
+def saveblockscript():
+
+    archivo = request.args.get('archivo')
+    datos = request.args.get('datos')
+
+    print(datos)
+    pathx=os.path.join(app.root_path, 'static/blocky/scripts',archivo)
+    f = open(pathx, "w",encoding='utf8')
+    f.write(datos)
+    f.close()
+
+    return 'Archivo Guardado' #"<!DOCTYPE html><html><head><!-- HTML meta refresh URL redirection -->   <meta http-equiv='refresh'   content='0; url=static/ace/ace.html?archivo=" + archivo + "&tipo=html'></head><body></body></html>"
+
+
 @app.route('/injectar', methods=['POST', 'GET'])
 def injectar():
 
@@ -724,12 +739,53 @@ def injectar():
 
     return 'Archivo Injectado'
 
+
+@app.route('/injectarscript', methods=['POST', 'GET'])
+def injectarscript():
+
+    archivo = request.args.get('archivo')
+    datos = request.args.get('datos')
+
+    print(datos)
+    pathx=os.path.join(app.root_path, 'static/blocky/scripts', archivo)
+    f = open(pathx, "w",encoding='utf8')
+    f.write(datos)
+    f.close()
+
+    return 'Archivo JS Generado'
+
 @app.route('/getblock', methods=['POST', 'GET'])
 def getblock():
 
     archivo = request.args.get('archivo')
 
     pathx=os.path.join(app.root_path, 'templates', 'tables',archivo)
+    f = open(pathx, "r",encoding='utf8')
+    datos=f.read()
+    f.close()
+
+    return str(datos)
+
+
+@app.route('/getblockscript', methods=['POST', 'GET'])
+def getblockscript():
+
+    archivo = request.args.get('archivo')
+
+    pathx=os.path.join(app.root_path, 'static/blocky/scripts',archivo)
+    f = open(pathx, "r",encoding='utf8')
+    datos=f.read()
+    f.close()
+
+    return str(datos)
+
+
+@app.route('/readjs', methods=['POST', 'GET'])
+def readjs():
+
+    archivo = request.args.get('archivo')
+
+    pathx=os.path.join(app.root_path, 'static/blocky/scripts',archivo)
     f = open(pathx, "r",encoding='utf8')
     datos=f.read()
     f.close()

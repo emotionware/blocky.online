@@ -88,6 +88,50 @@
 
                             }
 
+                            if (comandos[0] == 'edit') {
+                                window.open(full + '/static/blocky/builder.html?archivo=' + comandos[1] , '_blank');
+
+                            }
+
+                            if (comandos[0] == 'more') {
+                                //window.open(full + '/static/blocky/builder.html?archivo=' + comandos[1] , '_blank');
+
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "../../../readjs?archivo=" + comandos[1]
+                    }).then(function (data) {
+
+                            term.echo(data);
+
+
+                    });
+                });
+
+
+
+                            }
+
+
+                            if (comandos[0] == 'exec') {
+                                //window.open(full + '/static/blocky/builder.html?archivo=' + comandos[1] , '_blank');
+
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "../../../readjs?archivo=" + comandos[1]
+                    }).then(function (data) {
+
+                           term.echo('Ejecutando...');
+                           eval(data);
+
+
+
+                    });
+                });
+
+
+
+                            }
+
                             if (comandos[0] == 'builderscript') {
                                 window.open(full + '/builderscript', '_blank');
 
