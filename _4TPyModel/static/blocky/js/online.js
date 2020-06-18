@@ -1,6 +1,6 @@
 Blockly.defineBlocksWithJsonArray([{
   "type": "blockysystem",
-  "message0": "System Name %1 Database Name %2 Author Name %3 Author Email %4 Description %5 Customer %6 Modules %7",
+  "message0": "System Name %1 Database Name %2 Author Name %3 Author Email %4 Description %5 Customer %6",
   "args0": [
     {
       "type": "input_value",
@@ -37,42 +37,17 @@ Blockly.defineBlocksWithJsonArray([{
       "name": "customer",
       "check": "String",
       "align": "RIGHT"
-    },
-    {
-      "type": "input_statement",
-      "name": "modules",
-      "check": "Module",
-      "align": "RIGHT"
-    }
-  ],
-  "colour": 330,
-  "tooltip": "",
-  "helpUrl": "New System"
-},{
-  "type": "module",
-  "message0": "Module Name %1 Tables %2",
-  "args0": [
-    {
-      "type": "input_value",
-      "name": "module_name",
-      "check": "String",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_statement",
-      "name": "tablas",
-      "check": "table",
-      "align": "RIGHT"
     }
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 230,
+  "colour": 330,
   "tooltip": "",
-  "helpUrl": ""
-},{
+  "helpUrl": "New System"
+},
+{
   "type": "table",
-  "message0": "Table Name %1 Description %2 Groups %3",
+  "message0": "Table Name %1 Description %2",
   "args0": [
     {
       "type": "input_value",
@@ -85,43 +60,17 @@ Blockly.defineBlocksWithJsonArray([{
       "name": "description",
       "check": "String",
       "align": "RIGHT"
-    },
-    {
-      "type": "input_statement",
-      "name": "NAME",
-      "check": "field"
     }
   ],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 290,
+  "colour": 210,
   "tooltip": "",
   "helpUrl": ""
-},{
-  "type": "group",
-  "message0": "Group Name %1 Fields %2",
-  "args0": [
-    {
-      "type": "input_value",
-      "name": "group",
-      "check": "String",
-      "align": "RIGHT"
-    },
-    {
-      "type": "input_statement",
-      "name": "fields",
-      "check": "field",
-      "align": "RIGHT"
-    }
-  ],
-  "previousStatement": null,
-  "nextStatement": null,
-  "colour": 230,
-  "tooltip": "",
-  "helpUrl": ""
-},{
+},
+{
   "type": "field",
-  "message0": "Field Name %1 Type %2 Lenght %3 Comment %4 Caption %5 Helptext %6",
+  "message0": "Field Name %1 Type %2 Lenght %3 Comment %4",
   "args0": [
     {
       "type": "input_value",
@@ -146,16 +95,225 @@ Blockly.defineBlocksWithJsonArray([{
       "name": "Comment",
       "check": "String",
       "align": "RIGHT"
-    },
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_memo_255",
+  "message0": "Field Name %1 Type Memo 255",
+  "args0": [
     {
       "type": "input_value",
-      "name": "Caption",
+      "name": "field_name",
       "check": "String",
       "align": "RIGHT"
-    },
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_memo_400",
+  "message0": "Field Name %1 Type Memo 400",
+  "args0": [
     {
       "type": "input_value",
-      "name": "Helptext",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_money",
+  "message0": "Field Name %1 Type Money",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_number",
+  "message0": "Field Name %1 Type number",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_checkbox",
+  "message0": "Field Name %1 Type checkbox",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_rating",
+  "message0": "Field Name %1 Type rating",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_varchar_255",
+  "message0": "Field Name %1 Type varchar 255",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_varchar_10",
+  "message0": "Field Name %1 Type varchar 10",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_varchar_25",
+  "message0": "Field Name %1 Type varchar 25",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_varchar_50",
+  "message0": "Field Name %1 Type varchar 50",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_varchar_100",
+  "message0": "Field Name %1 Type varchar 100",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_time",
+  "message0": "Field Name %1 Type time",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 290,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "type_subtable",
+  "message0": "Field Name %1 Type Subtable Link",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "field_name",
       "check": "String",
       "align": "RIGHT"
     }
@@ -167,8 +325,6 @@ Blockly.defineBlocksWithJsonArray([{
   "helpUrl": ""
 }]);
 
-
-//system
 Blockly.JavaScript['blockysystem'] = function(block) {
   var value_name = Blockly.JavaScript.valueToCode(block, 'name', Blockly.JavaScript.ORDER_ATOMIC);
   var value_database_name = Blockly.JavaScript.valueToCode(block, 'database_name', Blockly.JavaScript.ORDER_ATOMIC);
@@ -176,49 +332,156 @@ Blockly.JavaScript['blockysystem'] = function(block) {
   var value_autorhemail = Blockly.JavaScript.valueToCode(block, 'autorhemail', Blockly.JavaScript.ORDER_ATOMIC);
   var value_description = Blockly.JavaScript.valueToCode(block, 'Description', Blockly.JavaScript.ORDER_ATOMIC);
   var value_customer = Blockly.JavaScript.valueToCode(block, 'customer', Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_modules = Blockly.JavaScript.statementToCode(block, 'modules');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  // TODO: Assemble JavaScript into code variable.
+  var code = '//* System Model ' + value_name + '  \n';
+  code += '//* Database Name ' + value_database_name + '  \n';
+  code += '//* Author Name ' + value_authorname + '  \n';
+  code += '//* Author Email ' + value_autorhemail + '  \n';
+  code += '//* Description ' + value_description + '  \n';
+  code += '//* Customer ' + value_customer + '  \n';
+  code += '//**********************************/\n';
+  code += 'var command="";\n';
+  code += 'var table="";\n';
+  code += 'var database="' + value_database_name.toLowerCase().replace("'","").replace("'","") + '";\n';
+  code += 'command="create database ' + value_database_name.replace("'","").replace("'","") + ';";\n';
   return code;
 };
 
-//module
-Blockly.JavaScript['module'] = function(block) {
-  var value_module_name = Blockly.JavaScript.valueToCode(block, 'module_name', Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_tablas = Blockly.JavaScript.statementToCode(block, 'tablas');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
-  return code;
-};
-
-//table
 Blockly.JavaScript['table'] = function(block) {
   var value_tablename = Blockly.JavaScript.valueToCode(block, 'tablename', Blockly.JavaScript.ORDER_ATOMIC);
   var value_description = Blockly.JavaScript.valueToCode(block, 'description', Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_name = Blockly.JavaScript.statementToCode(block, 'NAME');
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+ var code = '//* Table ' + value_tablename + '  */\n';
+ code += '//* Description Table ' + value_description + '  */\n';
+ code += 'table=' + value_tablename.toLowerCase() + ';\n';
+ code += 'command="create table ' + value_tablename.toLowerCase().replace("'","").replace("'","") + '(ID' + value_tablename.toLowerCase().replace("'","").replace("'","").substring(3).toUpperCase() + ' int(11) Not NULL AUTO_INCREMENT,  PRIMARY KEY (ID' + value_tablename.replace("'","").replace("'","").substring(3).toUpperCase() + ')  )  ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ;"   \n';
   return code;
 };
 
-//groups
-Blockly.JavaScript['group'] = function(block) {
-  var value_group = Blockly.JavaScript.valueToCode(block, 'group', Blockly.JavaScript.ORDER_ATOMIC);
-  var statements_fields = Blockly.JavaScript.statementToCode(block, 'fields');
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
-  return code;
-};
-
-//field generic
 Blockly.JavaScript['field'] = function(block) {
   var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
   var value_type = Blockly.JavaScript.valueToCode(block, 'Type', Blockly.JavaScript.ORDER_ATOMIC);
   var value_lenght = Blockly.JavaScript.valueToCode(block, 'Lenght', Blockly.JavaScript.ORDER_ATOMIC);
   var value_comment = Blockly.JavaScript.valueToCode(block, 'Comment', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_caption = Blockly.JavaScript.valueToCode(block, 'Caption', Blockly.JavaScript.ORDER_ATOMIC);
-  var value_helptext = Blockly.JavaScript.valueToCode(block, 'Helptext', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
   var code = '...;\n';
+  return code;
+};
+
+Blockly.JavaScript['type_memo_255'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(255) DEFAULT NULL comment \'memo\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_memo_400'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(400) DEFAULT NULL comment \'memo\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_money'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' double(12,2) DEFAULT NULL comment \'money\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_number'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' double(12,2) DEFAULT NULL comment \'number\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_checkbox'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' int(2) DEFAULT NULL comment \'checkbox\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_rating'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' int(11) DEFAULT NULL comment \'rating\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_varchar_255'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(255) DEFAULT NULL comment \'texto\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_varchar_10'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(10) DEFAULT NULL comment \'texto\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_varchar_25'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(25) DEFAULT NULL comment \'texto\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_varchar_50'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(50) DEFAULT NULL comment \'texto\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_varchar_100'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(100) DEFAULT NULL comment \'texto\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_time'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' varchar(255) DEFAULT NULL comment \'time\' ;" \n';
+
+  return code;
+};
+
+Blockly.JavaScript['type_subtable'] = function(block) {
+  var value_field_name = Blockly.JavaScript.valueToCode(block, 'field_name', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+ var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="alter table \' + table   + \' add column ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' int(11) DEFAULT NULL comment \'*\' ;" \n';
+
   return code;
 };

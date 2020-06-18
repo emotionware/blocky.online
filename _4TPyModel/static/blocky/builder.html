@@ -383,104 +383,169 @@
   <category name="Variables" colour="#a55b80" custom="VARIABLE"></category>
   <category name="Functions" colour="#995ba5" custom="PROCEDURE"></category>
 
-<category name="Blocky Online">
-
-   <block type="blockysystem">
-    <value name="name">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="authorname">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="autorhemail">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="Description">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="customer">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-
-
-    <block type="module">
-    <value name="module_name">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-
-  <block type="table">
-    <value name="tablename">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="description">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-
-
-  <block type="group">
-    <value name="group">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-
-
- <block type="field">
-    <value name="field_name">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="Type">
-      <block type="text">
-        <field name="TEXT">VARCHAR</field>
-      </block>
-    </value>
-    <value name="Lenght">
-      <block type="text">
-        <field name="TEXT">255</field>
-      </block>
-    </value>
-    <value name="Comment">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="Caption">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="Helptext">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-
-
-
-</category>
+<category name="BlokyOnline">
+    <block type="blockysystem">
+      <value name="name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="database_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="authorname">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="autorhemail">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="Description">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="customer">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="table">
+      <value name="tablename">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="description">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+  </category>
+  <category name="BlockyOnlineTypes">
+    <block type="field">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+      <value name="Lenght">
+        <block type="text">
+          <field name="TEXT">255</field>
+        </block>
+      </value>
+      <value name="Comment">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_memo_255">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_memo_400">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_money">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_number">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_checkbox">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_rating">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_varchar_255">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_varchar_10">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_varchar_25">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_varchar_100">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_time">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+    <block type="type_subtable">
+      <value name="field_name">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+      </value>
+    </block>
+  </category>
+  <category name="BlockyFieldTypes">
+    <block type="text">
+      <field name="TEXT">varchar</field>
+    </block>
+    <block type="text">
+      <field name="TEXT">double</field>
+    </block>
+    <block type="text">
+      <field name="TEXT">int</field>
+    </block>
+    <block type="text">
+      <field name="TEXT">date</field>
+    </block>
+  </category>
 
 </xml>
 
