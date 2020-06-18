@@ -1112,6 +1112,19 @@ def damereportes():
     elresultado=losfiles + '</table>'
     return render_template("templatereportes.html",filas=elresultado)
 
+@app.route('/dameblocks', methods=['GET','POST'])
+def dameblocks():
+
+    pathx=os.path.join(app.root_path, 'static', 'blocky/scripts')
+    onlyfiles = [f for f in listdir(pathx) if isfile(join(pathx, f))]
+
+    losfiles=''
+    for cadafile in onlyfiles:
+        losfiles += '   *' + cadafile
+
+    elresultado=losfiles
+    return  elresultado
+
 
 @app.route('/damedashboards', methods=['GET','POST'])
 def damedashboards():

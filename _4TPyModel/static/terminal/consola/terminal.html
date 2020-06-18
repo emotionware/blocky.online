@@ -112,6 +112,25 @@
                             }
 
 
+             if (comandos[0] == 'list') {
+                                //window.open(full + '/static/blocky/builder.html?archivo=' + comandos[1] , '_blank');
+
+                $(document).ready(function () {
+                    $.ajax({
+                        url: "../../../dameblocks"
+                    }).then(function (data) {
+
+                            term.echo(data);
+
+
+                    });
+                });
+
+
+
+                            }
+
+
                             if (comandos[0] == 'exec') {
                                 //window.open(full + '/static/blocky/builder.html?archivo=' + comandos[1] , '_blank');
 
