@@ -52,7 +52,7 @@ app.secret_key = 'You Will Never Guess'
 @app.route('/')
 def start():
     #return render_template('config/home.html',topmenu=topmenutemplate())
-    return render_template('')
+    return render_template('home.html')
 
 @app.route('/<path:filename>', methods=['GET', 'POST'])
 def index(filename):
