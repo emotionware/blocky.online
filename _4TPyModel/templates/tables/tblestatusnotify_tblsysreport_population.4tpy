@@ -1,1 +1,0 @@
-select * from tblestatusnotify_tblsysreport order by IDESTATUSNOTIFY_tblsysreport ASC 

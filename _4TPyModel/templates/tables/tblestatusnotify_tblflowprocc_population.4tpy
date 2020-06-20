@@ -1,1 +1,0 @@
-select * from tblestatusnotify_tblflowprocc order by IDESTATUSNOTIFY_tblflowprocc ASC 

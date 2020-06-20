@@ -1,1 +1,0 @@
-select * from tblaltanotify_tblflowproccdeta order by IDALTANOTIFY_tblflowproccdeta ASC 

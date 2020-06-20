@@ -1,1 +1,0 @@
-select * from tblestatusnotify_tbldocumento order by IDESTATUSNOTIFY_tbldocumento ASC 

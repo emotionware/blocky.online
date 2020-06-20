@@ -1,1 +1,0 @@
-select * from tblestatusnotify_tblagenda order by IDESTATUSNOTIFY_tblagenda ASC 

@@ -1,1 +1,0 @@
-select * from tblaltanotify_tbldocumento order by IDALTANOTIFY_tbldocumento ASC 

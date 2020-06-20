@@ -1,1 +1,0 @@
-select * from tblestatusnotify_tblsystiporeporte order by IDESTATUSNOTIFY_tblsystiporeporte ASC 
