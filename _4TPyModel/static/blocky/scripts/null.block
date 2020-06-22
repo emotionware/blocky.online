@@ -1,0 +1,26 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="website" id="O1Is{FHb)Zexf^Kf::6T" x="50" y="50">
+    <next>
+      <block type="document" id="9ES=b400CCeeqYjn?|da">
+        <value name="header">
+          <block type="header" id="`s3c^;zv/#%}L%[)f!Y]">
+            <value name="title">
+              <block type="text" id="s[G[6O/f~ko$kygP/zN9">
+                <field name="TEXT">Fernando Castro</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="body">
+          <block type="_1_column" id="4o:f^bk,Iaz$x`Hpz#_U">
+            <value name="content">
+              <block type="text" id="}:GL+O~1.12BECeF}-J?">
+                <field name="TEXT">Fernando Castro</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

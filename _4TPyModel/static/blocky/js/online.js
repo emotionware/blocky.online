@@ -339,6 +339,151 @@ Blockly.defineBlocksWithJsonArray([{
   "colour": 290,
   "tooltip": "",
   "helpUrl": ""
+},{
+  "type": "_1_column",
+  "message0": "1 COLUMN %1 1 Column Content %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "content"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "document",
+  "message0": "DOCUMENT %1 Header %2 Body %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "header",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "body",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "website",
+  "message0": "WEBSITE %1 Website Project Name %2 Author %3 Description %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "projectname",
+      "check": "String",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "author",
+      "check": "String",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "description",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "header",
+  "message0": "HEADER %1 Title %2 Content %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "title",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "content",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},{
+  "type": "h1_header",
+  "message0": "H1 - HEADER TEXT %1 Text %2 Style %3",
+  "args0": [
+    {
+      "type": "input_dummy",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": "String",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "style",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
+},{
+  "type": "h2_header",
+  "message0": "H2 - HEADER TEXT %1 Text %2 Style %3",
+  "args0": [
+    {
+      "type": "input_dummy",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": "String",
+      "align": "RIGHT"
+    },
+    {
+      "type": "input_value",
+      "name": "style",
+      "check": "String",
+      "align": "RIGHT"
+    }
+  ],
+  "output": null,
+  "colour": 230,
+  "tooltip": "",
+  "helpUrl": ""
 }]);
 
 Blockly.JavaScript['blockysystem'] = function(block) {
@@ -672,4 +817,61 @@ Blockly.JavaScript['type_date'] = function(block) {
    '   console.log(data);                });\n' +
    '              \n\n';
   return code;
+};
+
+
+
+
+
+Blockly.JavaScript['_1_column'] = function(block) {
+  var value_content = Blockly.JavaScript.valueToCode(block, 'content', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<div class="container"><div class="row clearfix"><div class="col-md-12 column">' + value_content.slice(1, -1) + '</div></div></div>';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['document'] = function(block) {
+  var value_header = Blockly.JavaScript.valueToCode(block, 'header', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_body = Blockly.JavaScript.valueToCode(block, 'body', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = 'document.write(\'<html><head>' + value_header.slice(1, -1) + '</head><body>' + value_body.slice(1, -1) + '</body></html>\');';
+  return code;
+};
+
+Blockly.JavaScript['website'] = function(block) {
+  var value_projectname = Blockly.JavaScript.valueToCode(block, 'projectname', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_author = Blockly.JavaScript.valueToCode(block, 'author', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_description = Blockly.JavaScript.valueToCode(block, 'description', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '//website project name:' + value_projectname.slice(1, -1) + '..;\n';
+  code += '//author:' + value_author.slice(1, -1) + '..;\n';
+  code += '//description:' + value_description.slice(1, -1) + '..;\n';
+  return code;
+};
+
+Blockly.JavaScript['header'] = function(block) {
+  var value_title = Blockly.JavaScript.valueToCode(block, 'title', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_content = Blockly.JavaScript.valueToCode(block, 'content', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<title>' + value_title.slice(1, -1) + '</title>' + value_content.slice(1, -1);
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['h1_header'] = function(block) {
+  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_style = Blockly.JavaScript.valueToCode(block, 'style', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<h1 style="' + value_style.slice(1, -1) + '"  >' + value_text.slice(1, -1) + '</h1>';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['h2_header'] = function(block) {
+  var value_text = Blockly.JavaScript.valueToCode(block, 'text', Blockly.JavaScript.ORDER_ATOMIC);
+  var value_style = Blockly.JavaScript.valueToCode(block, 'style', Blockly.JavaScript.ORDER_ATOMIC);
+  // TODO: Assemble JavaScript into code variable.
+  var code = '<h2 style="' + value_style.slice(1, -1) + '"  >' + value_text.slice(1, -1) + '</h2>';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.JavaScript.ORDER_NONE];
 };

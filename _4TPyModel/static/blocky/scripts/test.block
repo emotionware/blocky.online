@@ -1,1 +1,40 @@
-<xml xmlns="https://developers.google.com/blockly/xml"></xml>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="website" id="(cg;*Asa;.cz*t7T]$1=" x="10" y="10">
+    <next>
+      <block type="document" id="h#.[m7BVCuD[K!3--$As">
+        <value name="header">
+          <block type="header" id="xMkyc(,Mr-@+.m:`@l.!">
+            <value name="title">
+              <block type="text" id="Nbif4/Uaj{b{8EDBs-a9">
+                <field name="TEXT">titulo</field>
+              </block>
+            </value>
+            <value name="content">
+              <block type="text" id="xkC)+aQ-t]_1?Z%|Q]d1">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <value name="body">
+          <block type="_1_column" id="|~se*l-Lqtg4KL!^i*Zq">
+            <value name="content">
+              <block type="h2_header" id="^zrlu8g,+`bT$QzEX^!^">
+                <value name="text">
+                  <block type="text" id="IiKosK]g9?HBp;}X7Jsc">
+                    <field name="TEXT">fer</field>
+                  </block>
+                </value>
+                <value name="style">
+                  <block type="text" id="YtFwj|/M`U^h3jS8}[O3">
+                    <field name="TEXT">color:navy;</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

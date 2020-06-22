@@ -352,6 +352,8 @@ Blockly.defineBlocksWithJsonArray([{
 }]);
 
 
+
+
 Blockly.JavaScript['ocultar_agente'] = function(block) {
   // TODO: Assemble JavaScript into code variable.
   var code = 'robot.hide();\n';
