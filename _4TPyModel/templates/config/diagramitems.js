@@ -20,11 +20,19 @@ if (diagrama=='menu'){
     
     
         if (item==17){
-        window.open('/static/blocky/builder.html','_blank');
+        window.open('/static/blocky/custom.html','_blank');
     }
     
             if (item==18){
         window.open('/static/blocky/gblocky/demos/blockfactory/index.html','_blank');
+    }
+    
+            if (item==19){
+        window.open('/static/blocky/mysql.html','_blank');
+    }
+    
+                if (item==20){
+        window.open('/static/blocky/webbuilder.html','_blank');
     }
     
     

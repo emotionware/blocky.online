@@ -1,16 +1,48 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
-  <block type="text_print" id="W=P.,8${,+JJ3{1Fg|aw" x="50" y="170">
-    <value name="TEXT">
-      <shadow type="text" id="({+%u7@!F$=D%A=P@gQm">
-        <field name="TEXT">abc</field>
-      </shadow>
-      <block type="saludador" id="O!T/?M!?eIIGS(#/$w1h">
-        <value name="persona">
-          <block type="text" id="2PWk!M8Se10.Jy!-JPg]">
-            <field name="TEXT">fer</field>
-          </block>
-        </value>
+  <block type="text_print" id="W=P.,8${,+JJ3{1Fg|aw" x="0" y="0"></block>
+  <block type="mysql_database" id="{NmbiW)J)WXckBU[oBex" x="90" y="70">
+    <value name="databasename">
+      <block type="text" id="@5aGjfrVnf1um#VJiyx}">
+        <field name="TEXT">test25</field>
       </block>
     </value>
+    <next>
+      <block type="mysql_tablename" id="#OPs|N-bk6cb194ukNYw">
+        <value name="tablename">
+          <block type="text" id="%1Vqz(YB5~aiVV|Il!jr">
+            <field name="TEXT">tbltest</field>
+          </block>
+        </value>
+        <next>
+          <block type="mysql_field" id="K]xI-u#9GbTas^X#mNrr">
+            <value name="fieldname">
+              <block type="text" id="h29I$Awxz5(~{#8VM%{_">
+                <field name="TEXT">IDTEST</field>
+              </block>
+            </value>
+            <value name="Type">
+              <block type="text" id="T3T=eQ=0TV2Vk,SyKffv">
+                <field name="TEXT">int</field>
+              </block>
+            </value>
+            <value name="Lenght">
+              <block type="math_number" id="o[VBRa@`r9Wl7@g7EQA(">
+                <field name="NUM">11</field>
+              </block>
+            </value>
+            <value name="decimals">
+              <block type="math_number" id="{d9#Bfs@ZG!@^eUh2@JO">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <value name="Comment">
+              <block type="text" id="CCu9SM3jWXq#SX,9+b`c">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
   </block>
 </xml>

@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Blocky Online</title>
+    <title>Blocky</title>
 
     <script src="/static/blocky/js/blockly_compressed.js"></script>
     <script src="/static/blocky/js/javascript_compressed.js"></script>
     <script src="/static/blocky/js/blocks_compressed.js"></script>
     <script src="/static/blocky/js/es.js"></script>
-    <script src="/static/blocky/js/mysql.js"></script>
+    <script src="/static/blocky/js/custom.js"></script>
 
           <!-- add the jQuery script -->
     <script src="/static/scripts/jquery.min.js"></script>
@@ -19,12 +19,6 @@
 
 <!-- Clippy.js -->
 <script src="/static/clippy/build/clippy.min.js"></script>
-
-
-
-
-
-
 
 
 </head>
@@ -388,101 +382,142 @@
   <sep></sep>
   <category name="Variables" colour="#a55b80" custom="VARIABLE"></category>
   <category name="Functions" colour="#995ba5" custom="PROCEDURE"></category>
+  <category name="4TObjects">
 
-<category name="MySQL">
 
-   <block type="mysql_database">
-    <value name="databasename">
+    <block type="aviso"></block>
+    <block type="pausar_ejecucion"></block>
+
+
+
+
+    <block type="ejecutar_sentencia"></block>
+    <block type="ejecutar_value_change"></block>
+  </category>
+
+  <category name="Screen" >
+        <block type="screen_width"></block>
+    <block type="screen_height"></block>
+  </category>
+
+  <category name="URL Target">
+
+          <block type="text">
+    <field name="TEXT">_self</field>
+  </block>
       <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-  <block type="mysql_drop_database">
-    <value name="databasename">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-  <block type="mysql_tablename">
-    <value name="tablename">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-  <block type="mysql_drop_tablename">
-    <value name="tablename">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-  <block type="mysql_field">
-    <value name="fieldname">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-    <value name="Lenght">
-      <block type="math_number">
-        <field name="NUM">255</field>
-      </block>
-    </value>
-    <value name="decimals">
-      <block type="math_number">
-        <field name="NUM">0</field>
-      </block>
-    </value>
-    <value name="Comment">
-      <block type="text">
-        <field name="TEXT"></field>
-      </block>
-    </value>
-  </block>
-  <block type="text">
-    <field name="TEXT">decimal</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">double</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">float</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">int</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">char</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">varchar</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">datetime</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">date</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">time</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">text</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">mediumtext</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">longtext</field>
-  </block>
-  <block type="text">
-    <field name="TEXT">blob</field>
+    <field name="TEXT">_blank</field>
   </block>
 
-</category>
+    <block type="ir_url"></block>
 
+
+  </category>
+
+
+
+  <category name="Concatenadores">
+
+    <block type="concatenador5"></block>
+    <block type="concatenador4"></block>
+    <block type="concatenador3"></block>
+    <block type="concatenador2"></block>
+
+  </category>
+
+  <category name="Form Buttons"  >
+
+    <block type="ir_a_grid"></block>
+    <block type="actualizar_formulario"></block>
+    <block type="nuevoregistro"></block>
+      <block type="guardar_fomulario"></block>
+      <block type="bloquear"></block>
+      <block type="desbloquear"></block>
+      <block type="clonar"></block>
+      <block type="eliminar"></block>
+
+
+
+  </category>
+
+  <category name="Agent" >
+
+     <block type="cargar_agente"></block>
+     <block type="cargar_agente_solamante"></block>
+    <block type="animar_agente_cargado"></block>
+    <block type="mover_agente_cargado"></block>
+    <block type="gesto_agente_cargado"></block>
+    <block type="ocultar_agente"></block>
+
+      <block type="text">
+    <field name="TEXT">Merlin</field>
+  </block>
+             <block type="text">
+    <field name="TEXT">Links</field>
+  </block>
+      <block type="text">
+    <field name="TEXT">Clippy</field>
+  </block>
+
+  </category>
+
+  <category name="TextBox Objects"  >
+
+      <block type="valor_objeto"></block>
+      <block type="valor_de_campo"></block>
+      <block type="valor_de_campo_2_var"></block>
+
+
+     <block type="focus"></block>
+    <block type="disable"></block>
+    <block type="enable"></block>
+  </category>
+
+
+  <category name="Componentes" >
+
+
+    <block type="html_boton">
+    <value name="VALOR">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="ESTILO">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="PADRE">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="Función">
+      <block type="text">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+  </block>
+
+
+
+
+          <block type="text">
+    <field name="TEXT">Top</field>
+  </block>
+
+
+      <block type="text">
+    <field name="TEXT">Left</field>
+  </block>
+
+      <block type="text">
+    <field name="TEXT">Bottom</field>
+  </block>
+
+
+  </category>
 
 </xml>
 
@@ -498,9 +533,9 @@
 
           <table>
             <tr>
- <td>  <button onclick="injectar();"  >Generar Código</button></td>
-              <td> <button onclick="runCode()">Run</button></td>
 
+              <td> <button onclick="runCode()">Run</button></td>
+              <td>  <button onclick="injectar();"  >Injectar Código</button></td>
             </tr>
           </table>
 
@@ -510,6 +545,35 @@
 </table>
 
 
+<script>
+          var url_string = window.location.href;
+        var url = new URL(url_string);
+        var archivo = url.searchParams.get("archivo");
+
+
+// version .block
+        document.getElementById('archivo').value= archivo ;
+
+
+//cargando la version .block
+              $(document).ready(function () {
+                 $.ajax({
+                        url: "/getblock" + '?archivo=' + archivo + ".block"
+                    }).then(function (data) {
+
+
+        Blockly.mainWorkspace.clear();
+        xmlDom = Blockly.Xml.textToDom(data);
+        Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xmlDom);
+
+
+                    });
+                 });
+
+
+
+
+</script>
 
 
 
@@ -556,7 +620,7 @@ function save(){
 //salvando la version .block
               $(document).ready(function () {
                  $.ajax({
-                        url: "/saveblockscript" + '?archivo=' + archivo + ".block" + "&datos=" + encodeURIComponent(xmlText)
+                        url: "/saveblock" + '?archivo=' + archivo + ".block" + "&datos=" + encodeURIComponent(xmlText)
                     }).then(function (data) {
 
 alert(data);
@@ -593,7 +657,7 @@ function injectar(){
 //salvando la version .block
               $(document).ready(function () {
                  $.ajax({
-                        url: "/injectarscript" + '?archivo=' + archivo + ".js" + "&datos=" + encodeURIComponent(Blockly.JavaScript.workspaceToCode(workspace))
+                        url: "/injectar" + '?archivo=' + archivo + ".js" + "&datos=" + encodeURIComponent(Blockly.JavaScript.workspaceToCode(workspace))
                     }).then(function (data) {
 
 alert(data);
@@ -621,36 +685,6 @@ alert(data);
 
 
 }
-
-</script>
-
- <script>
-          var url_string = window.location.href;
-        var url = new URL(url_string);
-        var archivo = url.searchParams.get("archivo");
-
-
-// version .block
-        document.getElementById('archivo').value= archivo ;
-
-
-//cargando la version .block
-              $(document).ready(function () {
-                 $.ajax({
-                        url: "/getblockscript" + '?archivo=' + archivo + ".block"
-                    }).then(function (data) {
-
-
-        Blockly.mainWorkspace.clear();
-        xmlDom = Blockly.Xml.textToDom(data);
-        Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xmlDom);
-
-
-                    });
-                 });
-
-
-
 
 </script>
 
