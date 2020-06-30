@@ -123,16 +123,23 @@ Blockly.defineBlocksWithJsonArray([{
 
 Blockly.JavaScript['mysql_database'] = function(block) {
   var value_databasename = Blockly.JavaScript.valueToCode(block, 'databasename', Blockly.JavaScript.ORDER_ATOMIC);
-  // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+ // TODO: Assemble JavaScript into code variable.
+  var code= '//* Database Name ' + value_databasename + '  \n';
+  code += '//**********************************/\n';
+  code += 'var command="";\n';
+  code += 'var table="";\n';
+  code += 'var database="' + value_databasename.toLowerCase().replace("'","").replace("'","") + '";\n';
+  code += 'command="create database ' + value_databasename.replace("'","").replace("'","") + ';";\n';
   return code;
 };
 
 Blockly.JavaScript['mysql_tablename'] = function(block) {
   var value_tablename = Blockly.JavaScript.valueToCode(block, 'tablename', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
-  return code;
+ var code = '//* Table ' + value_tablename + '  */\n';
+ code += 'table=' + value_tablename.toLowerCase() + ';\n';
+ code += 'command="use " + database + "; create table ' + value_tablename.toLowerCase().replace("'","").replace("'","") + '(ID' + value_tablename.toLowerCase().replace("'","").replace("'","").substring(3).toUpperCase() + ' int(11) Not NULL AUTO_INCREMENT,  PRIMARY KEY (ID' + value_tablename.replace("'","").replace("'","").substring(3).toUpperCase() + ')  )  ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 ;" ;  \n';
+ return code;
 };
 
 Blockly.JavaScript['mysql_field'] = function(block) {
@@ -142,7 +149,19 @@ Blockly.JavaScript['mysql_field'] = function(block) {
   var value_decimals = Blockly.JavaScript.valueToCode(block, 'decimals', Blockly.JavaScript.ORDER_ATOMIC);
   var value_comment = Blockly.JavaScript.valueToCode(block, 'Comment', Blockly.JavaScript.ORDER_ATOMIC);
   // TODO: Assemble JavaScript into code variable.
-  var code = '...;\n';
+  var code = '//* Field ' + value_field_name + '  */\n';
+ code += 'command="use " + database + "; alter table \" + table   + \" add column ' + value_fieldname.toUpperCase().replace("'","").replace("'","") + ' ' + value_type.replace("'","").replace("'","") + '(' + value_lenght.replace("'","").replace("'","") + ') DEFAULT NULL comment \'' + value_comment.replace("'","").replace("'","") + '\' ;" ;\n';
+ code += '$.ajax({ \n' +
+   'url: "/sqlexec" + "?tablename=XXXX&sentencia=" + encodeURIComponent(command) + "&idobjeto=0" \n' +
+   '   }).then(function (data) { \n' +
+   '   console.log(data);                });\n' +
+   '              \n\n';
+ code += 'command="use " + database + "; alter table \" + table   + \" modify ' + value_field_name.toUpperCase().replace("'","").replace("'","") + ' ' + value_type.replace("'","").replace("'","") + '(' + value_lenght.replace("'","").replace("'","") + ') DEFAULT NULL comment \'' + value_comment.replace("'","").replace("'","") + '\' ;" ;\n';
+ code += '$.ajax({ \n' +
+   'url: "/sqlexec" + "?tablename=XXXX&sentencia=" + encodeURIComponent(command) + "&idobjeto=0" \n' +
+   '   }).then(function (data) { \n' +
+   '   console.log(data);                });\n' +
+   '              \n\n';
   return code;
 };
 
